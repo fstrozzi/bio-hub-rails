@@ -1,3 +1,14 @@
+PATH
+  remote: ~/dev/bioruby-ngs
+  specs:
+    bio-ngs (0.0.0)
+      bio (>= 1.4.1)
+      bio-bwa (>= 0.2.1)
+      bio-samtools (>= 0.0.0)
+      daemons (>= 1.1.0)
+      rubyvis (>= 0.5.0)
+      thor (>= 0.14.6)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -29,6 +40,11 @@ GEM
       activesupport (= 3.0.8)
     activesupport (3.0.8)
     arel (2.0.10)
+    bio (1.4.1)
+    bio-bwa (0.2.2)
+    bio-samtools (0.2.4)
+      bio (>= 1.4.1)
+      ffi
     bluepill (0.0.51)
       activesupport (>= 3.0.0)
       daemons (~> 1.1.0)
@@ -41,7 +57,9 @@ GEM
       daemons
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    ffi (1.0.9)
     i18n (0.5.0)
+    json (1.5.3)
     mail (2.2.19)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
@@ -49,6 +67,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     polyglot (0.3.1)
+    progressbar (0.9.1)
     rack (1.2.3)
     rack-mount (0.6.14)
       rack (>= 1.0.0)
@@ -68,6 +87,10 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     rake (0.9.2)
+    ruby-ensembl-api (1.0.1)
+      activerecord
+      bio (>= 1)
+    rubyvis (0.5.0)
     sqlite3 (1.3.3)
     state_machine (0.9.4)
     stomp (1.1.9)
@@ -80,9 +103,18 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bio (>= 1.4.1)
+  bio-bwa (>= 0.2.2)
+  bio-ngs!
+  bio-samtools (>= 0.0.0)
   bluepill
-  daemons
+  daemons (>= 1.1.0)
   delayed_job
+  ffi (>= 1.0.6)
+  json
+  progressbar (>= 0.9.0)
   rails (= 3.0.8)
-  sqlite3
+  ruby-ensembl-api (>= 1.0.1)
+  rubyvis (>= 0.5.0)
+  sqlite3 (>= 1.3.3)
   stomp

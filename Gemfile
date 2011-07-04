@@ -5,11 +5,26 @@ gem 'rails', '3.0.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'delayed_job'
 gem 'bluepill'
-gem 'daemons'
-gem 'stomp'
+
+gem "bio", ">= 1.4.1"
+gem "ffi", ">= 1.0.6"
+gem "rubyvis", ">= 0.5.0"
+gem "daemons", ">= 1.1.0"
+gem "bio-samtools", ">= 0.0.0"
+gem "ruby-ensembl-api", ">= 1.0.1"
+gem 'bio-bwa', ">= 0.2.2"
+gem "sqlite3", ">= 1.3.3"
+#gem "bio-blastxmlparser"
+gem "progressbar",">= 0.9.0"
+gem "json"
+gem "stomp"
+
+gem "bio-ngs", :path => "~/dev/bioruby-ngs"
+
+
+
 
 # Use unicorn as the web server
 # gem 'unicorn'
