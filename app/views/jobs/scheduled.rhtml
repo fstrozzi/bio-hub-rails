@@ -1,0 +1,39 @@
+<table>
+	<tr>
+		<th>Priority</th>
+		<th>Attempts</th>
+		<th>Task</th>
+		<th>Arguments</th>
+		<th>Options</th>
+		<th>Last Error</th>
+		<th>Run at</th>
+		<th>Locked at</th>
+		<th>Failed at</th>
+		<th>Locked by</th>
+		<th>Created at</th>
+		<th>Updated at</th>
+	</tr>	
+	<% @jobs.each do |j| %>
+	<% 
+		j.handler.gsub!(/\n/,' ')
+	 	j.handler =~ /!ruby\/object:(\S+).*args:  - (\S+) - - (\S+) - !map:Thor::CoreExt::HashWithIndifferentAccess   (.*)/	
+		task = "#{$1}##{$2}"
+		args = $3
+		options = $4
+	%>
+		<tr>
+			<td><%= j.priority %></td>
+			<td><%= j.attempts %></td>
+			<td><%= task %></td>
+			<td><%= args %></td>
+			<td><%= options %></td>
+			<td><%= j.last_error %></td>
+			<td><%= j.run_at %></td>
+			<td><%= j.locked_at %></td>
+			<td><%= j.failed_at %></td>
+			<td><%= j.locked_by %></td>
+			<td><%= j.created_at %></td>
+			<td><%= j.updated_at %></td>
+		</tr>
+	<% end %>
+</table>	
