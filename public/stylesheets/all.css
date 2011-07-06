@@ -1,0 +1,17 @@
+body {
+	background: black;
+	color: lightgreen;
+}
+
+td {
+	border: 1px solid green;
+	text-align: center;
+	font-family: Courier;
+	font-size: 12px;
+}
+
+th {
+	text-align: center;
+	font-family: Courier;
+	font-size: 11px;
+}
