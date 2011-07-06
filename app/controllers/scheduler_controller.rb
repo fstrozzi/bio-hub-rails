@@ -1,5 +1,0 @@
-class SchedulerController < ApplicationController
-
-
-
-end
